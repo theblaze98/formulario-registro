@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Resgistro</title>
+
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="contenedor">
+        <form action="" class="formulario" id="formulario">
+            <div class="input-group">
+                <label class="message1" for="nombre">Ingrese su Nombre</label>
+                <span class="fas fa-user"></span>
+                <input
+                    type="text"
+                    name="nombre"
+                    id="nombre"
+                    autocomplete="off"
+                >
+                <label class="message2" for="nombre"><i class="fas fa-times"></i> Debe ingresar un nombre</label>
+            </div>
+            <div class="input-group">
+                <label class="message1" for="correo">Ingrese un Correo</label>
+                <span class="fa fa-envelope"></span>
+                <input
+                    type="email"
+                    name="correo"
+                    id="correo"
+                    autocomplete="off"
+                >
+                <label class="message2" for="correo"><i class="fas fa-times"></i> Debe ingresar un correo</label>
+            </div>
+            <div class="input-group">
+                <label class="message1" for="pass">Ingrese una Contraseña</label>
+                <span class="fa fa-lock"></span>
+                <input
+                    type="password"
+                    name="pass"
+                    id="pass"
+                    autocomplete="off"
+                >
+                <label class="message2" for="pass"><i class="fas fa-times"></i> Debe ingresar una contraseña</label>
+            </div>
+            <div class="input-group">
+                <label class="message1" for="pass2">Confirme la Contraseña</label>
+                <span class="fa fa-lock"></span>
+                <input
+                    type="password"
+                    id="pass2"
+                    autocomplete="off"
+                >
+                <label class="message2" for="pass2"><i class="fas fa-times"></i> Debe confirmar la contraseña</label>
+            </div>
+
+            <div class="input-group radios">
+                <input type="radio"
+                    name="genero"
+                    id="hombre"
+                    value="Hombre"
+                >
+                <label class="radio" for="hombre">Hombre</label>
+
+                <input type="radio"
+                    name="genero"
+                    id="mujer"
+                    value="Mujer"
+                >
+                <label class="radio" for="mujer">Mujer</label>
+                <label for="" class="message2"><i class="fas fa-times"></i> Seleccione un genero</label>
+            </div>
+            <div class="input-group checkboxs">
+                <input type="checkbox"
+                    name="terminos"
+                    id="terminos"
+                    value="true"
+                >
+                <label class="checkbox" for="terminos">Acepto los Terminos y Condiciones</label>
+
+                <label for="" class="message2"><i class="fas fa-times"></i> Acepte los terminos y condiciones</label>
+            </div>
+
+            <button type="submit" id="btn_submit">Registrarse</button>
+        </form>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

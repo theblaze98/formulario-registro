@@ -1,0 +1,139 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    font-family: 'Roboto', sans-serif
+    font-size: 16px
+    width: 100%
+
+.contenedor
+    width: 90%
+    max-width: 600px
+    margin: 30px auto
+    border-radius: 10px
+    .formulario
+        width: 100%
+        padding: 20px
+        box-shadow: 0 0 10px 5px #ccc
+        .input-group
+            width: 100%
+            margin-bottom: 50px
+            position: relative
+            input
+                width: 100%
+                outline: none
+                border: 2px solid #ced7ff
+                padding: 10px 15px 10px 30px
+                border-radius: 5px
+                font-size: 1.13rem
+                line-height: 1.13rem
+                font-weight: 500
+                transition: all ease .5s
+                &:hover
+                    border-color: #3159fa
+                &:focus
+                    border-color: #3159fa
+            span
+                position: absolute
+                top: 15px
+                left: 10px
+                color: #3159fa
+            .message1
+                position: absolute
+                left: 30px
+                top: 12px
+                font-size: 1.13rem
+                color: #3159fa
+                cursor: text
+                transition: all ease .5s
+            &.active .message1
+                font-size: 12px
+                top: -5px
+                left: 10px
+                background: #fff
+                padding: 0 1px
+            .message2
+                color: #fa3939
+                position: absolute
+                top: 50px
+                left: 20px
+                opacity: 0
+                pointer-events: none
+                transition: all ease .15s
+            &.error .message2
+                opacity: 1
+                pointer-events: all
+            &.radios,
+            &.checkboxs
+                input
+                    display: none
+                    &:checked + label
+                        &::before
+                            border-color: #3159fa
+                            background: #3159fa
+                            animation: ease push-button .4s
+                .radio,
+                .checkbox
+                    padding: 10px 10px 10px 42px
+                    position: relative
+                    display: flex
+                    width: 30%
+                    align-items: center
+                    cursor: pointer
+                    color: #3159fa
+                    &:hover::before
+                        border-color: #3159fa
+                    &::before
+                        content: ''
+                        position: absolute
+                        width: 24px
+                        height: 24px
+                        left: 5px
+                        border-radius: 50%
+                        border: 2px solid #ced7ff
+                        transition: all ease .4s
+                    &::after
+                        content: ''
+                        width: 7px
+                        height: 14px
+                        position: absolute
+                        top: 9px
+                        left: 14px
+                        transform: rotate(45deg)
+                        border-right: 2px solid #fff
+                        border-bottom: 2px solid #fff
+                .message2
+                    top: 80px
+                .checkbox
+                    width: 100%
+                    &::before
+                        border-radius: 5px
+                    & + .message2
+                        top: 40px
+    button[type="submit"]
+        width: 100%
+        padding: 10px 15px
+        border: none
+        border-radius: 15px
+        background: #3159fa
+        color: #fff
+        cursor: pointer
+        &:hover
+            background: #5e7eff
+        &:focus
+            background: #3159fa
+            animation: push-button .4s ease
+
+@keyframes push-button
+    from
+        transform: scale(1, 1)
+    25%
+        transform: scale(1.07, 0.95)
+    50%
+        transform: scale(1, 1)
+    75%
+        transform: scale(0.95, 1.07)
+    to
+        transform: scale(1, 1)
